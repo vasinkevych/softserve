@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="userApp">
+<head>
+    <meta charset="UTF-8" >
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+</head>
+<body>
+<div class="wrapper">
+    <div class="" ng-controller="UserController as userApp">
+        <h1>{{ userApp.user.name }}</h1>
+        <img class="clearfix" ng-src="{{userApp.user.photo}}" alt="photo">
+
+        <div class="contact-info" ng-show="showInfo">
+            <p><span>phone:</span>{{userApp.user.phone}}</p>
+            <p><span>e-mail:</span>{{userApp.user.email}}</p>
+            <p><span>Social networks:</span><a ng-href="{{userApp.user.link}}" target="_blank">Facebook</a></p>
+            <p><span>Age:</span>{{userApp.user.age}}</p>
+            <p><span>About me:</span>{{userApp.user.info}}</p>
+        </div>
+        <div>
+            <button class="btn btn-link" ng-click="showInfo = ! showInfo" >More info...</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+.wrapper{
+    width: 450px;
+    margin: 40px auto;
+    background: #eeeeee;
+    padding: 40px;
+    -webkit-box-shadow: 0px 0px 50px 20px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 0px 0px 50px 20px rgba(0, 0, 0, 0.6);
+    box-shadow: 0px 0px 50px 20px rgba(0, 0, 0, 0.6);
+}
+img{
+    margin: 5px 5px 5px 0;
+    }
+span{
+    margin-right: 5px;
+}

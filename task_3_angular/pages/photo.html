@@ -1,0 +1,9 @@
+<h3 class="carouselpage">Photo Examples</h3>
+<div>
+        <uib-carousel interval="photoCtrl.myInterval" no-wrap="photoCtrl.noWrapSlides">
+            <uib-slide ng-repeat="slide in photoCtrl.slides" active="slide.active">
+                <img ng-src="{{slide.photo}}" style="margin:auto;">
+            </uib-slide>
+        </uib-carousel>
+    </div>
+</div>
