@@ -5,24 +5,24 @@
     <title>TASK 3 </title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="libs/angular.min.js"></script>
+    <script src="libs/angular-animate.min.js"></script>
+    <script src="libs/angular-ui-router.min.js"></script>
+    <script src="libs/ui-bootstrap-tpls-1.1.2.min.js"></script>
 </head>
 <body  ng-cloak>
-<header app-menu></header>
-<div class="container">
-    <div ui-view class="container slide"></div>
-</div>
-<footer  class="footer" app-menu></footer>
-<script src="js/angular.min.js"></script>
-<script src="js/angular-animate.min.js"></script>
-<script src="js/angular-ui-router.min.js"></script>
-<script src="js/ui-bootstrap-tpls-1.1.2.min.js"></script>
-<script src="js/app.js"></script>
-<script src="js/home.controller.js"></script>
-<script src="js/carousel.controller.js"></script>
-<script src="js/feedback.controller.js"></script>
-<script src="js/menu.directive.js"></script>
-<script src="js/menu.controller.js"></script>
-<script src="js/feedback.controller.js"></script>
-<script src="js/rating.controller.js"></script>
+    <header app-menu></header>
+    <div class="container">
+        <div ui-view class="container slide"></div>
+    </div>
+    <footer  class="footer" app-menu></footer>
+    <script src="app.js"></script>
+    <script src="home/home.controller.js"></script>
+    <script src="carousel/carousel.controller.js"></script>
+    <script src="feedback/feedback.controller.js"></script>
+    <script src="navigate/menu.directive.js"></script>
+    <script src="navigate/menu.controller.js"></script>
+    <script src="feedback/feedback.controller.js"></script>
+    <script src="feedback/rating.controller.js"></script>
 </body>
 </html>

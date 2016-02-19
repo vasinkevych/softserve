@@ -3,7 +3,7 @@
 
     angular
         .module("app")
-        .controller("menuController", menuController)
+        .controller("menuController", menuController);
 
     function menuController (){
         var vm = this;

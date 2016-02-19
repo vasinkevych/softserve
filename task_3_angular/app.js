@@ -11,21 +11,18 @@
         $stateProvider
             .state("home", {
                 url: "/",
-                templateUrl: "pages/home.html",
-                controller: "homeController",
-                controllerAs: "homeCtrl"
+                templateUrl: "home/home.html",
+                controller: "homeController as homeCtrl"
             })
             .state("photo", {
                 url: "/photo",
-                templateUrl: "pages/photo.html",
-                controller: "carouselController",
-                controllerAs: "photoCtrl"
+                templateUrl: "carousel/photo.html",
+                controller: "carouselController as photoCtrl"
             })
             .state("feedback", {
                 url: "/feedback",
-                templateUrl: "pages/feedback.html",
-                controller: "feedbackController",
-                controllerAs: "feedbackCtrl",
+                templateUrl: "feedback/feedback.html",
+                controller: "feedbackController as feedbackCtrl"
             })
     }
 

@@ -6,7 +6,12 @@
     function appMenu(){
         return {
             restrict: "A",
-            templateUrl: "pages/menu.html"
+            templateUrl: "navigate/menu.html"
         }
+    }
+
+    function headerController() {
+        var vm = this;
+        vm.isCollapsed = true;
     }
 })();

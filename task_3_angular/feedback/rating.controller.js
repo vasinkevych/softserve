@@ -13,7 +13,7 @@
         vm.hoveringOver = hoveringOver;
         vm.ratingStates = [
             {stateOn: "glyphicon-star", stateOff: "glyphicon-star-empty"}
-        ]
+        ];
 
         function hoveringOver  (value){
             vm.overStar = value;
