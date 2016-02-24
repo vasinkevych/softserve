@@ -1,9 +1,9 @@
-<h3 class="carouselpage">Photo Examples</h3>
-<div>
-        <uib-carousel interval="photoCtrl.myInterval" no-wrap="photoCtrl.noWrapSlides">
-            <uib-slide ng-repeat="slide in photoCtrl.slides" active="slide.active">
-                <img ng-src="{{slide.photo}}" style="margin:auto;">
-            </uib-slide>
-        </uib-carousel>
-    </div>
+<div class="center-block">
+    <h3 class="text-center">Photo Examples</h3>
+    <uib-carousel class="carousel-size center-block" interval="photoCtrl.myInterval" no-wrap="photoCtrl.noWrapSlides">
+        <uib-slide ng-repeat="slide in photoCtrl.slides" active="slide.active">
+            <img class="img-carousel" ng-src="{{::slide.photo}}">
+        </uib-slide>
+    </uib-carousel>
+</div>
 </div>

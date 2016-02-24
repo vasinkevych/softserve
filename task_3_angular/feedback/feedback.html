@@ -1,15 +1,15 @@
-<h2>{{feedbackCtrl.title}}</h2>
-<ul>
+<h2>{{feedbackCtrl.feedbackObj.title}}</h2>
+<ul class="col-lg-10">
     <li ng-repeat="feedback in feedbackCtrl.feedbacks">
         <blockquote>
             <p>Stars: {{feedback.stars}}</p>
             {{feedback.body}}
-            <cite> by: {{feedback.author}}</cite>
+            <p> by: {{feedback.author}}</p>
         </blockquote>
     </li>
 </ul>
-<fieldset class="form-group"><legend>{{feedbackCtrl.legend}}</legend>
-    <form name="feedbackForm" class="form-horizontal col-md-6" ng-submit="feedbackCtrl.addFeedback(feedback)">
+<fieldset class="form-group col-md-8"><legend>{{feedbackCtrl.legend}}</legend>
+    <form name="feedbackForm" class="form-horizontal" ng-submit="feedbackCtrl.addFeedback(feedback)">
         <blockquote>
             <b>Stars: {{feedbackCtrl.feedback.stars}}</b>
             {{feedbackCtrl.feedback.body}}
@@ -17,13 +17,12 @@
         </blockquote>
             <fieldset class="form-group" ng-controller="ratingController as ratingCtrl">
                 <uib-rating ng-model="feedbackCtrl.feedback.stars" max="ratingCtrl.max" readonly="ratingCtrl.isReadonly" on-hover="ratingCtrl.hoveringOver(value)" on-leave="overStar = null" titles="['one','two','three']" aria-labelledby="default-rating"></uib-rating>
-                <span class="label" ng-class=  "{'label-warning': percent<30, 'label-info': percent>=30 && percent<70, 'label-success': percent>=70}" ng-show="overStar && !isReadonly">{{percent}}%</span>
             </fieldset>
             <fieldset class="form-group">
-                <input class="form-control" ng-model="feedbackCtrl.feedback.author" type="email">
+                <input class="form-control" ng-model="feedbackCtrl.feedback.author" type="email" placeholder="Email">
             </fieldset>
             <fieldset class="form-group">
-            <textarea class="form-control" ng-model="feedbackCtrl.feedback.body" placeholder="type your feedback"></textarea>
+            <textarea class="form-control" ng-model="feedbackCtrl.feedback.body" placeholder="Type your feedback"></textarea>
             </fieldset>
             <fieldset class="form-group">
             <input class="btn btn-default pull-right btn-lg" type="submit" value="Submit feedback">

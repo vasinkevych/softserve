@@ -1,19 +1,19 @@
 <div class="row">
     <div class="col-sm-3" >
 
-        <img class="myphoto" ng-src="{{::homeCtrl.photo}}" alt="{{::homeCtrl.photo}}">
-        <p><span class="home-section-title">Social networks:</span><a ng-href="{{::homeCtrl.link}}" target="_blank">Facebook</a></p>
+        <img class="myphoto" ng-src="{{::homeCtrl.user.photo}}" alt="{{::homeCtrl.user.photo}}">
+        <p><span class="home-section-title">Social networks:</span><a ng-href="{{::homeCtrl.user.link}}" target="_blank">Facebook</a></p>
         <div>
-            <button class="btn btn-link" ng-click="isCollapsed = !isCollapsed">More info...</button>
+            <button class="btn btn-default" ng-click="isCollapsed = !isCollapsed">Show info</button>
         </div>
     </div>
-        <div class="col-sm-9">
-            <h3>{{ ::homeCtrl.name }}</h3>
-            <h4>{{ ::homeCtrl.desc }}</h4>
+    <div class="col-sm-9">
+        <h3>{{ ::homeCtrl.user.name }}</h3>
+        <h4>{{ ::homeCtrl.user.desc }}</h4>
         <div uib-collapse="!isCollapsed">
-            <p><span class="home-section-title">phone:</span>{{::homeCtrl.phone}}</p>
-            <p><span class="home-section-title">e-mail:</span>{{::homeCtrl.email}}</p>
-            <p><span class="home-section-title">About me:</span>{{::homeCtrl.info}}</p>
+            <p><span class="home-section-title">Phone:</span>{{::homeCtrl.user.phone}}</p>
+            <p><span class="home-section-title">e-mail:</span>{{::homeCtrl.user.email}}</p>
+            <p><span class="home-section-title">About:</span>{{::homeCtrl.user.info}}</p>
         </div>
     </div>
 </div>

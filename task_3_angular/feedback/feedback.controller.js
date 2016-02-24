@@ -5,22 +5,17 @@
         .module("app")
         .controller("feedbackController", feedbackController);
 
-    function feedbackController () {
+    feedbackController.$inject = ["dataService"];
+
+    function feedbackController (dataService) {
         var vm = this;
-        vm.title = "Feedback";
-        vm.legend = "Please, add your testimonial on this webpage";
+        vm.title = dataService.feedback.title;
+        vm.legend = dataService.feedback.legend;
         vm.feedback = {};
         vm.addFeedback = addFeedback;
-        vm.feedbacks = [
-            {
-                stars: 5,
-                body: "Lorem ip sum Dolor s Lorem ip sum Dolor sLorem ip sum Dolor sLorem ip sum Dolor sLorem ip sum Dolor sLorem ip sum Dolor sLorem ip sum Dolor sLorem ip sum Dolor sLorem ip sum Dolor sLorem ip sum Dolor sLorem ip sum Dolor sLorem ip sum Dolor sLorem ip sum Dolor sLorem ip sum Dolor sLorem ip sum Dolor sLorem ip sum Dolor sLorem ip sum Dolor sLorem ip sum Dolor sLorem ip sum Dolor sLorem ip sum Dolor sLorem ip sum Dolor sLorem ip sum Dolor sLorem ip sum Dolor sLorem ip sum Dolor sLorem ip sum Dolor sLorem ip sum Dolor sLorem ip sum Dolor s",
-                author:"vasinkevych@gmail.com"
+        vm.feedbacks = dataService.feedback.feedbacks;
 
-            }
-        ];
-
-        function addFeedback (feedback){
+        function addFeedback (){
             vm.feedbacks.push(this.feedback);
             this.feedback = {};
         }

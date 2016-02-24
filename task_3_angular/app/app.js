@@ -4,22 +4,28 @@
     angular.module("app", ["ui.router", "ngAnimate", "ui.bootstrap"])
         .config(configApp);
 
+    configApp.$inject = ["$stateProvider", "$urlRouterProvider"];
+
     function configApp($stateProvider, $urlRouterProvider) {
         $urlRouterProvider
-            .otherwise("/");
+            .otherwise("/main/home");
 
         $stateProvider
-            .state("home", {
-                url: "/",
+            .state("main", {
+                url: "/main",
+                templateUrl: "app/main.html"
+            })
+            .state("main.home", {
+                url: "/home",
                 templateUrl: "home/home.html",
                 controller: "homeController as homeCtrl"
             })
-            .state("photo", {
+            .state("main.photo", {
                 url: "/photo",
                 templateUrl: "carousel/photo.html",
                 controller: "carouselController as photoCtrl"
             })
-            .state("feedback", {
+            .state("main.feedback", {
                 url: "/feedback",
                 templateUrl: "feedback/feedback.html",
                 controller: "feedbackController as feedbackCtrl"

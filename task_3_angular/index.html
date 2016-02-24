@@ -1,27 +1,24 @@
 <!DOCTYPE html>
 <html lang="en"  ng-app="app">
 <head>
+    <link rel="icon" href="img/favicon.ico">
     <meta charset="UTF-8">
-    <title>TASK 3 </title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Bussines card </title>
+    <link rel="stylesheet" href="libs/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="libs/angular.min.js"></script>
+</head>
+<body  ng-cloak>
+<div ui-view></div>
     <script src="libs/angular-animate.min.js"></script>
     <script src="libs/angular-ui-router.min.js"></script>
     <script src="libs/ui-bootstrap-tpls-1.1.2.min.js"></script>
-</head>
-<body  ng-cloak>
-    <header app-menu></header>
-    <div class="container">
-        <div ui-view class="container slide"></div>
-    </div>
-    <footer  class="footer" app-menu></footer>
-    <script src="app.js"></script>
+    <script src="app/app.js"></script>
+    <script src="navigate/menu.directive.js"></script>
+    <script src="footer/footer.directive.js"></script>
+    <script src="service/data.service.js"></script>
     <script src="home/home.controller.js"></script>
     <script src="carousel/carousel.controller.js"></script>
-    <script src="feedback/feedback.controller.js"></script>
-    <script src="navigate/menu.directive.js"></script>
-    <script src="navigate/menu.controller.js"></script>
     <script src="feedback/feedback.controller.js"></script>
     <script src="feedback/rating.controller.js"></script>
 </body>

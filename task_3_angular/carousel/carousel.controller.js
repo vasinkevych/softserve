@@ -4,22 +4,12 @@
     angular
         .module("app")
         .controller("carouselController", carouselController);
-    carouselController.$inject = ["$scope"];
+    carouselController.$inject = ["dataService"];
 
-    function carouselController($scope) {
-        var quantity = 4;
+    function carouselController(dataService) {
         var vm = this;
-        vm.myInterval = 1500;
+        vm.myInterval = 2500;
         vm.noWrapSlides = false;
-        vm.addPhoto = addPhoto;
-        vm.slides = addPhoto();
-
-        function addPhoto(){
-            var slides = [];
-            for(var i = 1; i <= quantity; i++) {
-                slides.push({photo:"img/img_" + i + ".jpg"});
-            }
-            return slides;
-        }
+        vm.slides = dataService.carousel.addPhotoCarousel;
     }
 })();
