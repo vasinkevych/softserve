@@ -6,7 +6,7 @@
     function appMenu(){
         return {
             //restrict: "A",
-            templateUrl: "navigate/menu.html",
+            templateUrl: "app/navigate/menu.html",
             controller: menuController,
             controllerAs: "menuCtrl"
         }

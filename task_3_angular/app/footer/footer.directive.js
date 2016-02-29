@@ -6,7 +6,7 @@
     function appFooter(){
         return {
             restrict: "A",
-            templateUrl: "footer/footer.html",
+            templateUrl: "app/footer/footer.html",
             controller: footerController,
             controllerAs: "footerCtrl"
         }

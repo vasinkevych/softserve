@@ -4,6 +4,7 @@
     angular
         .module("app")
         .controller("carouselController", carouselController);
+
     carouselController.$inject = ["dataService"];
 
     function carouselController(dataService) {

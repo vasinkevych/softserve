@@ -17,17 +17,17 @@
             })
             .state("main.home", {
                 url: "/home",
-                templateUrl: "home/home.html",
+                templateUrl: "app/home/home.html",
                 controller: "homeController as homeCtrl"
             })
             .state("main.photo", {
                 url: "/photo",
-                templateUrl: "carousel/photo.html",
+                templateUrl: "app/carousel/photo.html",
                 controller: "carouselController as photoCtrl"
             })
             .state("main.feedback", {
                 url: "/feedback",
-                templateUrl: "feedback/feedback.html",
+                templateUrl: "app/feedback/feedback.html",
                 controller: "feedbackController as feedbackCtrl"
             })
     }
